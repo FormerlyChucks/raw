@@ -22,7 +22,7 @@ class Ruqqus:
         url = 'https://ruqqus.com{}'.format(endpoint)
         response = requests.request(method,url,headers=headers,data=data)
         if response.status_code == 200:
-            return response.json()
+            return response#.json()
         elif response.status_code == 204:
             return response.status_code
         elif response.status_code == 401:
